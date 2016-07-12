@@ -1,7 +1,20 @@
 {
     "name": "emailinvest/emailinvest-api",
-    "description": "Emailinvest Api",
+    "type": "library",
+    "description": "Emailinvest API",
+    "authors": [
+        {
+            "name": "Ivelin Ivanov",
+            "email": "ifkooo@gmail.com"
+        }
+    ],
     "require": {
-        "php": "^5.4.0"
-    }
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "LatestApi/Emailinvest"            
+        ]
+    },
+    "license": "LGPL-2.1"
 }
