@@ -1,6 +1,6 @@
 Email Invest 
 API Ver: 2.00b
-Last Updated: 17.03.2015
+Last Updated: 12.07.2016
 
 *****	ATTENTION	*****
 

@@ -1,18 +1,16 @@
 <?php
 
 /*
- * Copyright (C) 2015 emailinvest-app1.
+ * Copyright (C) 2016 Emailinvest API.
  * 
- * This file is part of emailinvest-app1.
- * emailinvest-app1 can not be copied and/or distributed without the express
- * permission of emailinvest-app1.
+ * Return all of your groups
  */
 
-include 'LatestApi/Emailinvest.php';
+include '../LatestApi/Emailinvest.php';
 
-use Api;
+use api;
 
-$ei = new Api\emailinvest("bbf081e7caef84636b4838f69b0d4866", "smartemail", true);
+$ei = new api\emailinvest("your_api_key", "your_username", true);
 $ei->screen = "array"; // - option for php array
 $ei->host = "app1.emailinvest.com/api";
 
