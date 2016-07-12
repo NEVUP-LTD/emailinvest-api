@@ -1,5 +1,5 @@
 {
-    "name": "Emailinvest/EmailinvestApi",
+    "name": "emailinvest/emailinvest-api",
     "description": "Emailinvest Api",
     "require": {
         "php": "^5.3.3 || ^7.0"
