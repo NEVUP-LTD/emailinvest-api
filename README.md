@@ -4,7 +4,7 @@ EmailInvest API
 ================
 [![Latest Stable Version](https://poser.pugx.org/emailinvest/emailinvest-api/v/stable)](https://packagist.org/packages/emailinvest/emailinvest-api) [![Total Downloads](https://poser.pugx.org/emailinvest/emailinvest-api/downloads)](https://packagist.org/packages/emailinvest/emailinvest-api) [![License](https://poser.pugx.org/emailinvest/emailinvest-api/license)](https://packagist.org/packages/emailinvest/emailinvest-api)
 
- ***Ver: 2.00,  Last Updated: 12.07.2016***
+ ***Last Updated: 12.07.2016***
  
 *API is currently in development status.*
 
@@ -43,19 +43,26 @@ FUNCTIONS
 **Fields Functions **
 
 > ***fieldsgetlist.php*** *- Get list with your fields*
+
 > ***fieldsadd.php*** *- Add new field to your account*
+
 > ***fieldsdelete.php*** *- Remove field from your account*
 
 **Groups Functions**
 
 > ***groupsadd.php*** *- Add new group name to your account*
+
 > ***groupsedit.php*** *- Edit existing Group Name*
+
 > ***groupsgetlist.php*** *- Get all groups*
+
 > ***groupsempty.php*** *- Empty contacts from group and delete it if there not exists in other groups*
+
 > ***groupsdelete.php*** *- Delete group and delete contacts if there not exists in other groups*
 
 **Campaigns Functions**
 
 > ***fromsgetlist.php*** *- Get your Frome emails*
+
 > ***campaignsend.php*** *- Send campaings from your account*
 
