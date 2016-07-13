@@ -11,10 +11,8 @@
     "require": {
         "php": ">=5.4.0"
     },
-    "autoload": {
-        "classmap": [
-            "LatestApi/Emailinvest.php"            
-        ]
+   "autoload": {
+        "files": ["LatestApi/Emailinvest.php"]
     },
     "license": "LGPL-2.1"
 }
