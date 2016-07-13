@@ -1,18 +1,14 @@
 <?php
-include  'LatestApi/emailinvest.php';
+
+/**
+ * Get fields list
+ */
+include 'LatestApi/emailinvest.php';
 
 use api;
-$ei=new api\emailinvest("your_api_key", "your_username", true);
-$ei->screen="array"; //- Опция
 
-// run command
-$result=$ei->fieldsgetlist();
+$ei = new api\emailinvest("your_api_key", "your_username", true);
 
-
-//Header('Content-type: text/xml');
-// echo $result;
-
-echo "<pre>";
-print_r( $result );
-echo "</pre>";
+$result = $ei->fieldsgetlist();
+var_dump($result);
 ?>
