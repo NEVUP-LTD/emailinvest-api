@@ -8,7 +8,42 @@ API is currently in development status.
 
 This is BETA version.
 
+
+*****	INSTALATION	*****
+
+***     Using GIT     ***
+
+Download from GitHub files and iclude file 
+
+"include 'LatestApi/Emailinvest.php';"
+
+
+***     Using COMPOSER     ***
+
+composer require emailinvest/emailinvest-api
+
+Use Autoload: include 'vendor/autoload.php';
+
+
+
+*****	DEFINE CLASS	*****
+
+
+use api;
+
+$ei = new api\emailinvest("YOUR_KEY", "YOUR_USERNAME", true);
+
+$ei->Host = "app1.emailinvest.com/api";
+
+$result = $ei->Me();
+var_dump($result);
+
+
+*****	FUNCTIONS	*****
+
+
 Please, send recommendations to us so we can improve it.
+
 
 ***** Contacts Functions *****
 
