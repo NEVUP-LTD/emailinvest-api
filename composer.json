@@ -13,7 +13,7 @@
     },
     "autoload": {
         "classmap": [
-            "LatestApi/Emailinvest"            
+            "LatestApi/Emailinvest.php"            
         ]
     },
     "license": "LGPL-2.1"
