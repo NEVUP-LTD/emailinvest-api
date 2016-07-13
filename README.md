@@ -8,6 +8,12 @@ EmailInvest API
  
 *API is currently in development status.*
 
+## License
+
+This software is distributed under the [LGPL 2.1](http://www.gnu.org/licenses/lgpl-2.1.html) license. Please read LICENSE for information on the
+software availability and distribution.
+
+
 INSTALATION
 -----------
 
