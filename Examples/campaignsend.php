@@ -1,19 +1,13 @@
 <?php
 
-/*
- * Copyright (C) 2015 emailinvest-app1.
- * 
- * This file is part of emailinvest-app1.
- * emailinvest-app1 can not be copied and/or distributed without the express
- * permission of emailinvest-app1.
+/**
+ * Send Campaign
  */
-
 include ("../LatestApi/Emailinvest.php");
 
 use api;
 
 $ei = new api\Emailinvest("da39a3ee5e6b4b0d3255bfef95601890afd80709", "ifkooo", true);
-$ei->screen = "array"; // - option for php array
 $ei->host = "app1.emailinvest.com/api";
 
 /**
