@@ -12,7 +12,7 @@
  *
  *
  * @author Emailinvest <support@emailinvest.com>
- * @version 1.00
+ * @version 2.01
  * @link https://github.com/NEVUP-LTD/emailinvest-api 
  * @copyright (c) 2016
  * @package Emailinvest
@@ -21,7 +21,7 @@
 
 namespace Api;
 
-/*
+/**
  * Check for compatibility
  * PHP 5.4>
  * CURL
