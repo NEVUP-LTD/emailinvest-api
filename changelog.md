@@ -9,4 +9,5 @@
 
 ## Version 1.0.0 (12.07.2014)
 *Create all new functions for API
+*Initial public release
 
