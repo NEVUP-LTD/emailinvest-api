@@ -4,8 +4,6 @@ EmailInvest API
 ================
 [![Latest Stable Version](https://poser.pugx.org/emailinvest/emailinvest-api/v/stable)](https://packagist.org/packages/emailinvest/emailinvest-api) [![Total Downloads](https://poser.pugx.org/emailinvest/emailinvest-api/downloads)](https://packagist.org/packages/emailinvest/emailinvest-api) [![License](https://poser.pugx.org/emailinvest/emailinvest-api/license)](https://packagist.org/packages/emailinvest/emailinvest-api)
 
- ***Last Updated: 12.07.2016***
- 
 *API is currently in development status.*
 
 ## License
@@ -35,7 +33,7 @@ DEFINE CLASS
     use api;
     $ei = new api\emailinvest("YOUR_KEY", "YOUR_USERNAME", true);
     $ei->Host = "app1.emailinvest.com/api";
-    $result = $ei->Me(); var_dump($result);
+    $result = $ei->me(); var_dump($result);
 
 
 FUNCTIONS
