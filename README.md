@@ -33,14 +33,15 @@ DEFINE CLASS
     use api;
     $ei = new api\emailinvest("YOUR_KEY", "YOUR_USERNAME", true);
     $ei->Host = "app1.emailinvest.com/api";
-    $result = $ei->me(); var_dump($result);
+    $result = $ei->me();
+    var_dump($result);
 
 
 FUNCTIONS
 ---------
 *Please, send recommendations to us so we can improve it.*
 
-**Contacts Functions**
+ **Contacts Functions**
 
 > ***contactsadd.php*** *- Add contacts to your account*
 
