@@ -12,7 +12,7 @@ $ei = new api\emailinvest("your_api_key", "your_username", true);
 $email = "ifkooo@gmail.com";
 $name = "From Name";
 
-$result = $ei->fromsadd($email, $name);
+$result = $ei->fromsAdd($email, $name);
 echo "<pre>";
 print_r($result);
 echo "</pre>";

@@ -13,5 +13,5 @@ use api;
 $ei = new api\emailinvest("your_api_key", "your_username", true);
 $ei->Host = "app1.emailinvest.com/api";
 
-$result = $ei->Me();
+$result = $ei->me();
 var_dump($result);

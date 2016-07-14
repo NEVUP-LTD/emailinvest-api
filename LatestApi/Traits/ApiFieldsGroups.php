@@ -1,6 +1,5 @@
 <?php
-
-/* 
+/**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -17,42 +16,42 @@ trait ApiFieldsGroups
      * Add Email lists  to your profile
      * @param string  $name  List Name
      */
-    public function groupsadd($name)
+    public function groupsAdd($name)
     {
         $params = array();
         $params["name"] = $name;
-        return $this->Screen($this->Send($params, "groupsadd"));
+        return $this->screen($this->send($params, "groupsadd"));
     }
 
     /**
      * Get Email lists  from your profile
      */
-    public function groupsgetlist()
+    public function groupsGetList()
     {
         $params = array();
-        return $this->Screen($this->Send($params, "groupsgetlist"));
+        return $this->screen($this->send($params, "groupsgetlist"));
     }
 
     /**
      * Delete Email lists  to your profile
      * @param int  $list_id  List ID
      */
-    public function groupsdelete($list_id)
+    public function groupsDelete($list_id)
     {
         $params = array();
         $params["list_id"] = $list_id;
-        return $this->Screen($this->Send($params, "groupsdelete"));
+        return $this->screen($this->send($params, "groupsdelete"));
     }
 
     /**
-     * Delete all contacts from Email lists 
+     * Delete all contacts from Email lists
      * @param int  $list_id  List ID
      */
-    public function groupsempty($list_id)
+    public function groupsEmpty($list_id)
     {
         $params = array();
         $params["list_id"] = $list_id;
-        return $this->Screen($this->Send($params, "groupsempty"));
+        return $this->screen($this->send($params, "groupsempty"));
     }
 
     /**
@@ -61,33 +60,32 @@ trait ApiFieldsGroups
      * @param string  $name Field's name
      * @param string  $type Field's type (Varchar, Int, Date)
      */
-    public function fieldsadd($code, $name, $type = "VARCHAR")
+    public function fieldsAdd($code, $name, $type = "VARCHAR")
     {
         $params = array();
         $params["name"] = $name;
         $params["code"] = $code;
         $params["type"] = $type;
-        return $this->Screen($this->Send($params, "fieldsadd"));
+        return $this->screen($this->send($params, "fieldsadd"));
     }
 
     /**
      * Delete Fields from your profile
      * @param string  $code Field's code
      */
-    public function fieldsdelete($code)
+    public function fieldsDelete($code)
     {
         $params = array();
         $params["code"] = $code;
-        return $this->Screen($this->Send($params, "fieldsdelete"));
+        return $this->screen($this->send($params, "fieldsdelete"));
     }
 
     /**
      * Get Fields list from your profile
      */
-    public function fieldsgetlist()
+    public function fieldsGetList()
     {
         $params = array();
-        return $this->Screen($this->Send($params, "fieldsgetlist"));
+        return $this->screen($this->send($params, "fieldsgetlist"));
     }
-
 }

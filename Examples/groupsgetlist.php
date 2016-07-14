@@ -13,6 +13,6 @@ use api;
 $ei = new api\emailinvest("your_api_key", "your_username", true);
 $ei->host = "app1.emailinvest.com/api";
 
-$result = $ei->groupsgetlist();
+$result = $ei->groupsGetList();
 var_dump($result);
 ?>

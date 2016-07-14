@@ -21,7 +21,7 @@ trait ApiContacts
      * @param array  $Fields Other field for thi emails
      * @param string $Settings create_fields,create_groups,clear_fields,clear_groups
      */
-    function contactsadd($Email, $ListID, $Fields = false, $Settings = false)
+    function contactsAdd($Email, $ListID, $Fields = false, $Settings = false)
     {
         $params = array();
         $params["email"] = $Email;
@@ -34,7 +34,7 @@ trait ApiContacts
         }
 
         $params["list_id"] = json_encode($ListID);
-        return $this->Screen($this->Send($params, "contactsadd"));
+        return $this->screen($this->send($params, "contactsadd"));
     }
 
     /**
@@ -47,5 +47,4 @@ trait ApiContacts
         $params["emails"] = $Email;
         return $this->screen($this->send($params, "validate"));
     }
-
 }

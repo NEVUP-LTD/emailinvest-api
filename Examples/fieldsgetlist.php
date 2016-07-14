@@ -9,6 +9,6 @@ use api;
 
 $ei = new api\emailinvest("your_api_key", "your_username", true);
 
-$result = $ei->fieldsgetlist();
+$result = $ei->fieldsGetList();
 var_dump($result);
 ?>
