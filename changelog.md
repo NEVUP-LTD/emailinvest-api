@@ -1,5 +1,8 @@
 # ChangeLog
 
+## Version 2.0.3 (14.07.2016)
+* Add Version checker
+
 ## Version 2.0.2 (14.07.2016)
 * Add PSR2 Code standart
 * Added Composer

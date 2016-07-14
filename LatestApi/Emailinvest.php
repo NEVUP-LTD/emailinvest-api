@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Oficial emailinvest api file
  *
@@ -19,22 +20,6 @@
  */
 
 namespace Api;
-
-/**
- * Check for compatibility
- * PHP 5.4>
- * CURL
- * JSON
- */
-if (version_compare(phpversion(), '5.4.0', '<')) {
-    die("PHP version isn't high enough. Minimal required: 5.4.0. Try REST API");
-}
-if (!function_exists('curl_init')) {
-    die('Email Invest needs the CURL PHP extension.');
-}
-if (!function_exists('json_decode')) {
-    die('Email Invest needs the JSON PHP extension.');
-}
 
 /*
  *  Include Traits only for PHP > 5.4
@@ -96,6 +81,22 @@ class Emailinvest
 
     public function __construct($ApiKey = null, $ApiUsername = null, $SSL = false)
     {
+        /**
+         * Check for compatibility
+         * PHP 5.4>
+         * CURL
+         * JSON
+         */
+        if (version_compare(phpversion(), '5.4.0', '<')) {
+            die("PHP version isn't high enough. Minimal required: 5.4.0. Try REST API");
+        }
+        if (!function_exists('curl_init')) {
+            die('Email Invest needs the CURL PHP extension.');
+        }
+        if (!function_exists('json_decode')) {
+            die('Email Invest needs the JSON PHP extension.');
+        }
+
         $this->Apikey = $ApiKey;
         $this->ApiUsername = $ApiUsername;
         $this->SSL = $SSL;
@@ -155,4 +156,5 @@ class Emailinvest
     {
         return ($val) ? "https://" : "http://";
     }
+
 }
