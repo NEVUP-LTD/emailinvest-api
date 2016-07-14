@@ -27,7 +27,7 @@ $settings["create_groups"] = true; // Create groups if not exists
 $settings["clear_fields"] = true; //  Clear all fields
 $settings["clear_groups"] = true; //  Clear all groups
 
-$result = $ei->contactsadd("support@emailinvest.com", $groups, $fields, $settings);
+$result = $ei->contactsAdd("support@emailinvest.com", $groups, $fields, $settings);
 // echo "<pre>"; print_r($result); echo "</pre>";
 echo $r["code"] == "1" ? "Success - {$r["text"]}" : "Error #{$r["code"]}, {$r["text"]}";
 echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";

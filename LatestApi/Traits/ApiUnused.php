@@ -11,30 +11,30 @@ namespace Api;
 trait ApiUnused
 {
 
-    public function contactsdelete($email, $list_id)
+    public function contactsDelete($email, $list_id)
     {
         $params = array();
         $params["email"] = $email;
         $params["list_id"] = $list_id;
-        return $this->Screen($this->Send($params, "contactsdelete"));
+        return $this->screen($this->send($params, "contactsdelete"));
     }
 
-    public function contactsunsubscribe($email, $list_id = false)
+    public function contactsUnsubscribe($email, $list_id = false)
     {
         $params = array();
         $params["email"] = $email;
         $params["list_id"] = $list_id;
-        return $this->Screen($this->Send($params, "contactsunsubscribe"));
+        return $this->screen($this->send($params, "contactsunsubscribe"));
     }
 
-    public function contactsgetcontact($email)
+    public function contactsGetContact($email)
     {
         $params = array();
         $params["email"] = $email;
-        return $this->Screen($this->Send($params, "contactsgetcontact"));
+        return $this->screen($this->send($params, "contactsgetcontact"));
     }
 
-    public function contactsgetlist($list_id, $filter, $field = false)
+    public function contactsGetList($list_id, $filter, $field = false)
     {
         // Change to filter!
         $page = $filter["page"];
@@ -51,10 +51,10 @@ trait ApiUnused
         $params["from_date"] = $from_date;
         $params["to_date"] = $to_date;
         $params["order_by"] = $order_by;
-        return $this->Screen($this->Send($params, "contactsgetlist"));
+        return $this->screen($this->send($params, "contactsgetlist"));
     }
 
-    public function contactsgetunsubscribed($list_id, $filter, $field = false)
+    public function contactsGetUnsubscribed($list_id, $filter, $field = false)
     {
         // Change to filter!
         $page = $filter["page"];
@@ -71,52 +71,49 @@ trait ApiUnused
         $params["from_date"] = $from_date;
         $params["to_date"] = $to_date;
         $params["order_by"] = $order_by;
-        return $this->Screen($this->Send($params, "contactsgetunsubscribed"));
+        return $this->screen($this->send($params, "contactsgetunsubscribed"));
     }
 
-    public function contactsgetdeleted($field = false, $page = false, $number_for_page = false, $order_by = "email")
+    public function contactsGetDeleted($field = false, $page = false, $number_for_page = false, $order_by = "email")
     {
         $params = array();
         $params["field"] = $field;
         $params["page"] = $page;
         $params["number_for_page"] = $number_for_page;
         $params["order_by"] = $order_by;
-        return $this->Screen($this->Send($params, "contactsgetdeleted"));
+        return $this->screen($this->send($params, "contactsgetdeleted"));
     }
 
-    public function contactsgetbounced($field = false, $page = false, $number_for_page = false, $order_by = "email")
+    public function contactsGetBounced($field = false, $page = false, $number_for_page = false, $order_by = "email")
     {
         $params = array();
         $params["field"] = $field;
         $params["page"] = $page;
         $params["number_for_page"] = $number_for_page;
         $params["order_by"] = $order_by;
-        return $this->Screen($this->Send($params, "contactsgetbounced"));
+        return $this->screen($this->send($params, "contactsgetbounced"));
     }
 
-    public function groupsupdate($list_id, $name)
+    public function groupsUpdate($list_id, $name)
     {
         $params = array();
         $params["list_id"] = $list_id;
         $params["name"] = $name;
-        return $this->Screen($this->Send($params, "groupsupdate"));
+        return $this->screen($this->send($params, "groupsupdate"));
     }
 
-    public function fieldsupdate($code, $name)
+    public function fieldsUpdate($code, $name)
     {
         $params = array();
         $params["code"] = $code;
         $params["name"] = $name;
-        return $this->Screen($this->Send($params, "fieldsupdate"));
+        return $this->screen($this->send($params, "fieldsupdate"));
     }
 
-    public function fromsdelete($email)
+    public function fromsDelete($email)
     {
         $params = array();
         $params["email"] = $email;
-        return $this->Screen($this->Send($params, "fromsdelete"));
+        return $this->screen($this->send($params, "fromsdelete"));
     }
-
-  
-
 }

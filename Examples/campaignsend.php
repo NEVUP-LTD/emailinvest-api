@@ -62,6 +62,6 @@ $options["ga"] = "Test GA";
 $options["inform"]["begin"] = true;
 $options["inform"]["end"] = true;
 
-$result = $ei->campaignsend($data, $recipients, $options);
+$result = $ei->campaignSend($data, $recipients, $options);
 
 echo $result["code"] == 1 ? "CampaignID: " . $result["data"] : "ERROR: " . $result["text"];

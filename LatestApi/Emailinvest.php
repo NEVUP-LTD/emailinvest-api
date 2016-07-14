@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Oficial emailinvest api file
  *
@@ -13,7 +12,7 @@
  *
  * @author Emailinvest <support@emailinvest.com>
  * @version 2.01
- * @link https://github.com/NEVUP-LTD/emailinvest-api 
+ * @link https://github.com/NEVUP-LTD/emailinvest-api
  * @copyright (c) 2016
  * @package Emailinvest
  * @subpackage API
@@ -40,11 +39,11 @@ if (!function_exists('json_decode')) {
 /*
  *  Include Traits only for PHP > 5.4
  */
-require_once( __DIR__ . "/Traits/ApiSimples.php");
-require_once( __DIR__ . "/Traits/ApiContacts.php");
-require_once( __DIR__ . "/Traits/ApiFieldsGroups.php");
-require_once( __DIR__ . "/Traits/ApiCampaigns.php");
-require_once( __DIR__ . "/Traits/ApiUnused.php");
+require_once(__DIR__ . "/Traits/ApiSimples.php");
+require_once(__DIR__ . "/Traits/ApiContacts.php");
+require_once(__DIR__ . "/Traits/ApiFieldsGroups.php");
+require_once(__DIR__ . "/Traits/ApiCampaigns.php");
+require_once(__DIR__ . "/Traits/ApiUnused.php");
 
 /**
  * Public API to access your emailinvest account
@@ -62,36 +61,35 @@ class Emailinvest
 
     /**
      * Use SSL to connect
-
-     * 
+     *
      * @var Bol $SSL
      */
     public $SSL;
 
     /**
      * Your emailinvest username
-     * 
+     *
      * @var String $ApiUsername
      */
     public $ApiUsername;
 
     /**
      * Your secret key
-     * 
+     *
      * @var String $ApiKey
      */
     public $ApiKey;
 
     /**
      * End point application server
-     * 
+     *
      * @var String $Host
      */
     public $Host = "app1.emailinvest.com/api";
 
     /**
      *  Returned result's format
-     * 
+     *
      * @var String $Screen
      */
     public $Screen = "array";
@@ -104,11 +102,11 @@ class Emailinvest
     }
 
     /**
-     * Comunicator with app
+     * Communicate with app
      * @param array  $post Variable for current action
      * @param string $action Current action
      */
-    public function Send($post, $action)
+    public function send($post, $action)
     {
         $postdata = "";
         $post["ip"] = filter_input(INPUT_SERVER, 'SERVER_ADDR');
@@ -139,7 +137,7 @@ class Emailinvest
      * Preparate results from app
      * @param array  $ResultFromHost Result from app
      */
-    public function Screen($ResultFromHost)
+    public function screen($ResultFromHost)
     {
 
         if ($this->Screen == 'array') {
@@ -157,5 +155,4 @@ class Emailinvest
     {
         return ($val) ? "https://" : "http://";
     }
-
 }

@@ -17,10 +17,9 @@ trait ApiSimples
     /**
      * Test connection
      */
-    public function Me()
+    public function me()
     {
         $params = array();
-        return $this->Screen($this->Send($params, "me"));
+        return $this->screen($this->send($params, "me"));
     }
-
 }
