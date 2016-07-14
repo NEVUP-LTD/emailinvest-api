@@ -1,7 +1,7 @@
 {
     "name": "emailinvest/emailinvest-api",
     "type": "library",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Emailinvest API",
     "authors": [
         {
