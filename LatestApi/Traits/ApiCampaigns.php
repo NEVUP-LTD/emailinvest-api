@@ -58,4 +58,20 @@ trait ApiCampaigns
         $params["options"] = json_encode($options);
         return $this->screen($this->send($params, "campaignSend"));
     }
+
+    /**
+     * Get Statistics for campaign
+     * 
+     * @param type $campId Campaign ID
+     * @param type $options Options for extracted statistics
+     * @return array Statistics
+     */
+    public function getStats($campId, $options = false)
+    {
+        $params = [];
+        $params["campId"] = $campId;
+        $params["options"] = json_encode($options);
+        return $this->screen($this->send($params, "campaignStats"));
+    }
+
 }
