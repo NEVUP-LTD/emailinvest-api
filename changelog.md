@@ -1,5 +1,8 @@
 # ChangeLog
 
+## Version 2.0.4 (27.09.2016)
+* Add function to get campaign statistics
+
 ## Version 2.0.3 (14.07.2016)
 * Add Version checker
 

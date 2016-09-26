@@ -71,3 +71,4 @@ FUNCTIONS
 
 > ***campaignsend.php*** *- Send campaings from your account*
 
+> ***stats.php*** *- Get Campaign statistics*

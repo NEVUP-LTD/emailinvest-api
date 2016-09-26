@@ -8,11 +8,11 @@
  * [error] => 0  - ALL IS OK
  * [code] => 1 - ERROR CODE (1- ALl IS OK)
  * [text] =>"It's OK" - Friendly message
- * data] => Array ( )  Result from function
+ * [data] => Array ( )  Result from function
  *
  *
  * @author Emailinvest <support@emailinvest.com>
- * @version 2.01
+ * @version 2.04
  * @link https://github.com/NEVUP-LTD/emailinvest-api
  * @copyright (c) 2016
  * @package Emailinvest
