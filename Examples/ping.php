@@ -6,8 +6,6 @@
  */
 require '../EmailinvestAutoload.php';
 
-use Emailinvest;
-
 $ei = new Emailinvest("your_api_key", "your_username", true);
 $ei->Host = "app1.emailinvest.com/api";
 

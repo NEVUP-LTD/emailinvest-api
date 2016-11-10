@@ -6,12 +6,9 @@
  * Return all of your groups
  */
 
-include '../LatestApi/Emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
-
-$ei = new api\emailinvest("your_api_key", "your_username", true);
-$ei->host = "app1.emailinvest.com/api";
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 $result = $ei->groupsGetList();
 var_dump($result);

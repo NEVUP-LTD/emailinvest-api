@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Oficial emailinvest api file
+ * Official emailinvest api file
  *
  * RESULTS
  * Array (
  * [error] => 0  - ALL IS OK
  * [code] => 1 - ERROR CODE (1- ALl IS OK)
- * [text] =>"It's OK" - Friendly message
+ * [text] => "It's OK" - Friendly message
  * [data] => Array ( )  Result from function
  *
  *
  * @author Emailinvest <support@emailinvest.com>
- * @version 2.1.1
+ * @version 3.0.0
  * @link https://github.com/NEVUP-LTD/emailinvest-api
  * @copyright (c) 2016
  * @package Emailinvest
@@ -23,11 +23,15 @@
  */
 
 
-
 /**
  * Public API to access your emailinvest account
  *
- * @author ifkooo
+ * @property string host End point host
+ * @property string ApiKey Your Api key
+ * @property string ErrorMessage Error message connection
+ * @property mixed Result Array data with result
+ * @property string Error Error message from results
+ * @author Emailinvest
  */
 class Emailinvest
 {
@@ -35,13 +39,10 @@ class Emailinvest
     use ApiSimples,
         ApiContacts,
         ApiFieldsGroups,
-        ApiCampaigns,
-        ApiUnused;
+        ApiCampaigns;
 
     /**
      * Use SSL to connect
-     *
-     * @var Bol $SSL
      */
     public $SSL;
 
@@ -91,27 +92,28 @@ class Emailinvest
             die('Email Invest needs the JSON PHP extension.');
         }
 
-        $this->Apikey = $ApiKey;
+        $this->ApiKey = $ApiKey;
         $this->ApiUsername = $ApiUsername;
         $this->SSL = $SSL;
     }
 
     /**
      * Communicate with app
-     * @param array  $post Variable for current action
+     * @param array $post Variable for current action
      * @param string $action Current action
+     * @return bool
      */
     public function send($post, $action)
     {
-        $postdata = "";
+        $postData = "";
         $post["ip"] = filter_input(INPUT_SERVER, 'SERVER_ADDR');
-        $post["key"] = $this->Apikey;
+        $post["key"] = $this->ApiKey;
         $post["username"] = $this->ApiUsername;
         $post["Screen"] = $this->Screen;
         $this->ErrorMessage = "";
 
         foreach ($post as $k => $v) {
-            $postdata .= '&' . $k . '=' . rawurlencode(($v));
+            $postData .= '&' . $k . '=' . rawurlencode(($v));
         }
 
 
@@ -119,7 +121,7 @@ class Emailinvest
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
@@ -129,8 +131,19 @@ class Emailinvest
     }
 
     /**
+     * Check for secure connection usage
+     * @param $val
+     * @return string Protocol
+     */
+    private function useSecure($val)
+    {
+        return ($val) ? "https://" : "http://";
+    }
+
+    /**
      * Preparate results from app
-     * @param array  $ResultFromHost Result from app
+     * @param array $ResultFromHost Result from app
+     * @return mixed Result from api
      */
     public function screen($ResultFromHost)
     {
@@ -140,15 +153,6 @@ class Emailinvest
         }
 
         return $ResultFromHost ? $this->Result : $this->Error;
-    }
-
-    /**
-     * Check for secure connection usage
-     * @param bol  $val Use Secure Connection
-     */
-    private function useSecure($val)
-    {
-        return ($val) ? "https://" : "http://";
     }
 
 }

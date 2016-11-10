@@ -6,12 +6,9 @@
  * Return your account data
  */
 
-include '../LatestApi/Emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
-$ei = new api\emailinvest("your_api_key", "your_username", true);
-$ei->Host = "app1.emailinvest.com/api";
-
-$result = $ei->getStats($campId);
+$result = $ei->getStats("campId");
 var_dump($result);

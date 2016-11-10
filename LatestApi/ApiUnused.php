@@ -15,6 +15,8 @@ trait ApiUnused
         $params = array();
         $params["email"] = $email;
         $params["list_id"] = $list_id;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsdelete"));
     }
 
@@ -23,6 +25,8 @@ trait ApiUnused
         $params = array();
         $params["email"] = $email;
         $params["list_id"] = $list_id;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsunsubscribe"));
     }
 
@@ -30,6 +34,8 @@ trait ApiUnused
     {
         $params = array();
         $params["email"] = $email;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsgetcontact"));
     }
 
@@ -50,6 +56,8 @@ trait ApiUnused
         $params["from_date"] = $from_date;
         $params["to_date"] = $to_date;
         $params["order_by"] = $order_by;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsgetlist"));
     }
 
@@ -70,6 +78,8 @@ trait ApiUnused
         $params["from_date"] = $from_date;
         $params["to_date"] = $to_date;
         $params["order_by"] = $order_by;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsgetunsubscribed"));
     }
 
@@ -80,6 +90,8 @@ trait ApiUnused
         $params["page"] = $page;
         $params["number_for_page"] = $number_for_page;
         $params["order_by"] = $order_by;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsgetdeleted"));
     }
 
@@ -90,15 +102,9 @@ trait ApiUnused
         $params["page"] = $page;
         $params["number_for_page"] = $number_for_page;
         $params["order_by"] = $order_by;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "contactsgetbounced"));
-    }
-
-    public function groupsUpdate($list_id, $name)
-    {
-        $params = array();
-        $params["list_id"] = $list_id;
-        $params["name"] = $name;
-        return $this->screen($this->send($params, "groupsupdate"));
     }
 
     public function fieldsUpdate($code, $name)
@@ -106,6 +112,8 @@ trait ApiUnused
         $params = array();
         $params["code"] = $code;
         $params["name"] = $name;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "fieldsupdate"));
     }
 
@@ -113,6 +121,8 @@ trait ApiUnused
     {
         $params = array();
         $params["email"] = $email;
+        /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         return $this->screen($this->send($params, "fromsdelete"));
     }
 }

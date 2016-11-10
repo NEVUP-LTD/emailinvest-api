@@ -12,12 +12,12 @@ This software is distributed under the [LGPL 2.1](http://www.gnu.org/licenses/lg
 software availability and distribution.
 
 
-INSTALATION
+INSTALLATION
 -----------
 
 **Using GIT**
 
-*Download from GitHub files and iclude file*
+*Download from GitHub files and include file*
 
     include 'LatestApi/Emailinvest.php';
 
@@ -57,7 +57,7 @@ FUNCTIONS
 
 > ***groupsadd.php*** *- Add new group name to your account*
 
-> ***groupsedit.php*** *- Edit existing Group Name*
+> ***groupsEdit.php*** *- Edit existing Group Name*
 
 > ***groupsgetlist.php*** *- Get all groups*
 
@@ -67,8 +67,8 @@ FUNCTIONS
 
 **Campaigns Functions**
 
-> ***fromsgetlist.php*** *- Get your Frome emails*
+> ***fromsgetlist.php*** *- Get your From emails*
 
-> ***campaignsend.php*** *- Send campaings from your account*
+> ***campaignSend.php*** *- Send campaigns from your account*
 
 > ***stats.php*** *- Get Campaign statistics*

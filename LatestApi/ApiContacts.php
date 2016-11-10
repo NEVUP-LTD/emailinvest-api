@@ -15,10 +15,11 @@ trait ApiContacts
 
     /**
      * Add Contacts to your profile
-     * @param string  $Email Email to add
-     * @param int  $ListID GroupID to add email
-     * @param array  $Fields Other field for thi emails
-     * @param string $Settings create_fields,create_groups,clear_fields,clear_groups
+     * @param string $Email Email to add
+     * @param int $ListID GroupID to add email
+     * @param array|bool $Fields Other field for thi emails
+     * @param bool|string $Settings create_fields,create_groups,clear_fields,clear_groups
+     * @return
      */
     function contactsAdd($Email, $ListID, $Fields = false, $Settings = false)
     {
@@ -38,12 +39,27 @@ trait ApiContacts
 
     /**
      * Validate Contacts
-     * @param string  $Email Email to check
+     * @param string $Email Email to check
      */
     function validate($Email)
     {
         $params = array();
         $params["emails"] = $Email;
         return $this->screen($this->send($params, "validate"));
+    }
+
+    /**
+     * Update group data
+     *
+     * @param int $groupId groupId to edit
+     * @param string $name New name
+     * @return mixed
+     */
+    public function groupsUpdate($groupId, $name)
+    {
+        $params = array();
+        $params["list_id"] = $groupId;
+        $params["name"] = $name;
+        return $this->screen($this->send($params, "groupsupdate"));
     }
 }

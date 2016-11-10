@@ -3,11 +3,9 @@
 /**
  * Get fields list
  */
-include 'LatestApi/emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
-
-$ei = new api\emailinvest("your_api_key", "your_username", true);
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 $result = $ei->fieldsGetList();
 var_dump($result);

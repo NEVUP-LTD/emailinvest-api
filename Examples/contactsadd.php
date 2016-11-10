@@ -4,15 +4,14 @@
  * Add new contact
  */
 
-use Api;
+require '../EmailinvestAutoload.php';
 
-$ei = new Api\Emailinvest("da39a3ee5e6b4b0d3255bfef95601890afd80709", "ifkooo", true);
-$ei->Host = "app1.emailinvest.com/api";
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 /**
- * Simple ussage
- * 
- * $r=$ei->contactsadd("support@emailinvest.com", 9341);	// Add only to one groups
+ * Simple usage
+ *
+ * $r=$ei->contactsadd("support@emailinvest.com", 9341);    // Add only to one groups
  */
 /* Advanced */
 $fields["{first_name}"] = "Support";
@@ -27,8 +26,6 @@ $settings["clear_fields"] = true; //  Clear all fields
 $settings["clear_groups"] = true; //  Clear all groups
 
 $result = $ei->contactsAdd("support@emailinvest.com", $groups, $fields, $settings);
-// echo "<pre>"; print_r($result); echo "</pre>";
-echo $r["code"] == "1" ? "Success - {$r["text"]}" : "Error #{$r["code"]}, {$r["text"]}";
-echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
+var_dump($result);
 
 

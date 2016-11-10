@@ -13,7 +13,7 @@ trait ApiFieldsGroups
 
     /**
      * Add Email lists  to your profile
-     * @param string  $name  List Name
+     * @param string $name List Name
      */
     public function groupsAdd($name)
     {
@@ -33,7 +33,7 @@ trait ApiFieldsGroups
 
     /**
      * Delete Email lists  to your profile
-     * @param int  $list_id  List ID
+     * @param int $list_id List ID
      */
     public function groupsDelete($list_id)
     {
@@ -44,7 +44,7 @@ trait ApiFieldsGroups
 
     /**
      * Delete all contacts from Email lists
-     * @param int  $list_id  List ID
+     * @param int $list_id List ID
      */
     public function groupsEmpty($list_id)
     {
@@ -55,9 +55,9 @@ trait ApiFieldsGroups
 
     /**
      * Add Fields to your profile
-     * @param string  $code Field's code
-     * @param string  $name Field's name
-     * @param string  $type Field's type (Varchar, Int, Date)
+     * @param string $code Field's code
+     * @param string $name Field's name
+     * @param string $type Field's type (Varchar, Int, Date)
      */
     public function fieldsAdd($code, $name, $type = "VARCHAR")
     {
@@ -70,7 +70,7 @@ trait ApiFieldsGroups
 
     /**
      * Delete Fields from your profile
-     * @param string  $code Field's code
+     * @param string $code Field's code
      */
     public function fieldsDelete($code)
     {

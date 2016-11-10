@@ -3,12 +3,9 @@
 /**
  * Get from emails
  */
-include 'LatestApi/Emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use Api;
-
-$ei = new Api\emailinvest("bbf081e7caef84636b4838f69b0d4866", "smartemail", true);
-$ei->host = "app1.emailinvest.com/api";
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 $result = $ei->fromsGetList();
 

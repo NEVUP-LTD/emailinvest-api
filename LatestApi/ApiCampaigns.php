@@ -19,16 +19,15 @@ trait ApiCampaigns
     public function fromsGetList()
     {
         $params = array();
-        /**
-         * @return Array Status Code and array with all from emails
-         */
+
         return $this->screen($this->send($params, "fromsgetlist"));
     }
 
     /**
      * Add From Email to your profile
      * @param string $email From Email
-     * @param string  $name Display Name
+     * @param bool|string $name Display Name
+     * @return
      */
     public function fromsAdd($email, $name = false)
     {
@@ -44,7 +43,7 @@ trait ApiCampaigns
     /**
      * Use to send campaigns from your profile
      *
-     * @param array $data Campaign structore
+     * @param array $data Campaign structure
      * @param array $recipients Recipients and filters
      * @param array $options Settings for campaign
      * @return array
@@ -60,12 +59,12 @@ trait ApiCampaigns
 
     /**
      * Get Statistics for campaign
-     * 
-     * @param type $campId Campaign ID
-     * @param type $options Options for extracted statistics
+     *
+     * @param int $campId Campaign ID
+     * @param array $options Options for extracted statistics
      * @return array Statistics
      */
-    public function getStats($campId, $options = false)
+    public function getStats($campId, $options = [])
     {
         $params = [];
         $params["campId"] = $campId;

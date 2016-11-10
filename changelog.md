@@ -1,8 +1,8 @@
 # ChangeLog
 
 
-## Version 2.1.1 (10.11.2016)
-* Add PSR-4 autload
+## Version 3.0.0 (10.11.2016)
+* Add PSR-4 autoload
 
 ## Version 2.0.4 (27.09.2016)
 * Add function to get campaign statistics
@@ -11,7 +11,7 @@
 * Add Version checker
 
 ## Version 2.0.2 (14.07.2016)
-* Add PSR2 Code standart
+* Add PSR2 Code standard
 * Added Composer
 * Added PHP 5.4+ support
 *Create all new functions

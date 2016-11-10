@@ -3,13 +3,9 @@
 /**
  * Delete field
  */
-include 'LatestApi/emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
-
-$ei = new api\emailinvest("your_api_key", "your_username", true);
-$ei->host = "app1.emailinvest.com/api";
-
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 $code = "{field_code}";
 $result = $ei->fieldsDelete($code);

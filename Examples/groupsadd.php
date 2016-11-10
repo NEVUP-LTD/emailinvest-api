@@ -3,15 +3,11 @@
 /**
  * Add new group
  */
-include 'LatestApi/emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
-
-$ei = new api\emailinvest("your_api_key", "your_username", true);
-$ei->host = "app1.emailinvest.com/api";
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
 $name = "Group Name";
 
 $result = $ei->groupsAdd($name);
-// echo "<pre>"; print_r($result); echo "</pre>";
-echo $r["code"] == "1" ? "Success - {$r["text"]}" : "Error #{$r["code"]}, {$r["text"]}";
+var_dump($result);

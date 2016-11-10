@@ -3,17 +3,12 @@
 /**
  * Add new from email
  */
-include 'LatestApi/emailinvest.php';
+require '../EmailinvestAutoload.php';
 
-use api;
+$ei = new emailinvest("yourApiKey", "yourUsername", true);
 
-$ei = new api\emailinvest("your_api_key", "your_username", true);
-
-$email = "ifkooo@gmail.com";
+$email = "E-mail";
 $name = "From Name";
 
 $result = $ei->fromsAdd($email, $name);
-echo "<pre>";
-print_r($result);
-echo "</pre>";
-echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
+var_dump($result);
