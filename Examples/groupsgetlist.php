@@ -6,7 +6,7 @@
  * Return all of your groups
  */
 
-include '../LatestApi/Class.Emailinvest.php';
+include '../LatestApi/Emailinvest.php';
 
 use api;
 
