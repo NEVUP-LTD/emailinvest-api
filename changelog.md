@@ -1,7 +1,7 @@
 # ChangeLog
 
 
-## Version 2.0.7 (10.11.2016)
+## Version 2.1.0 (10.11.2016)
 * Add PSR-4 autload
 
 ## Version 2.0.4 (27.09.2016)
