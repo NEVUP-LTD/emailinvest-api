@@ -12,7 +12,7 @@
  *
  *
  * @author Emailinvest <support@emailinvest.com>
- * @version 2.1.0
+ * @version 2.1.1
  * @link https://github.com/NEVUP-LTD/emailinvest-api
  * @copyright (c) 2016
  * @package Emailinvest
