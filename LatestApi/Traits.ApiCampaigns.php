@@ -6,7 +6,6 @@
  * and open the template in the editor.
  */
 
-namespace Api;
 
 /**
  * Functions for Campaigns

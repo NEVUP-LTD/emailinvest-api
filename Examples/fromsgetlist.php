@@ -3,7 +3,7 @@
 /**
  * Get from emails
  */
-include 'LatestApi/Emailinvest.php';
+include 'LatestApi/Class.Emailinvest.php';
 
 use Api;
 
@@ -15,4 +15,3 @@ $result = $ei->fromsGetList();
 echo "<pre>";
 print_r($result["data"]["data"]);
 echo "</pre>";
-?>

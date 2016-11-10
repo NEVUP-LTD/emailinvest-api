@@ -18,4 +18,3 @@ $GroupId = "GroupID";
 $NewName = "NEW NAME FOR Group";
 $result = $ei->groupsUpdate($GroupId, $NewName);
 echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
-?>

@@ -15,4 +15,3 @@ $name = "Group Name";
 $result = $ei->groupsAdd($name);
 // echo "<pre>"; print_r($result); echo "</pre>";
 echo $r["code"] == "1" ? "Success - {$r["text"]}" : "Error #{$r["code"]}, {$r["text"]}";
-?>
