@@ -8,7 +8,7 @@
  * 
  */
 
-include 'LatestApi/Class.Emailinvest.php';
+include 'LatestApi/Emailinvest.php';
 
 use Api;
 

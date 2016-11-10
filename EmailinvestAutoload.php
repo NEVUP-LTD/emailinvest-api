@@ -5,14 +5,9 @@ function EmailinvestAutoload($classname)
 
     //Load Classes
 
-    $fileClass = dirname(__FILE__).DIRECTORY_SEPARATOR."LatestApi".DIRECTORY_SEPARATOR."Class.".$classname.'.php';
-    $fileTraits = dirname(__FILE__).DIRECTORY_SEPARATOR."LatestApi".DIRECTORY_SEPARATOR."Traits.".$classname.'.php';
+    $fileClass = dirname(__FILE__).DIRECTORY_SEPARATOR."LatestApi".DIRECTORY_SEPARATOR.$classname.'.php';
 
     if (is_readable($fileClass)) {        require $fileClass;    }
-    elseif (is_readable($fileTraits)) {        require $fileTraits;    }
-    else {
-        print_r($fileClass ."<br>".$fileTraits);
-    }
 }
 
 
