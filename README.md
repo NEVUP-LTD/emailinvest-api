@@ -19,7 +19,7 @@ INSTALLATION
 
 *Download from GitHub files and include file*
 
-    include 'LatestApi/Emailinvest.php';
+    require 'EmailinvestAutoload.php';
 
 **Using COMPOSER**
 
@@ -30,9 +30,7 @@ INSTALLATION
 DEFINE CLASS
 ------------
 
-    use api;
     $ei = new api\emailinvest("YOUR_KEY", "YOUR_USERNAME", true);
-    $ei->Host = "app1.emailinvest.com/api";
     $result = $ei->me();
     var_dump($result);
 
