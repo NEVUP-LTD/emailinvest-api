@@ -17,4 +17,3 @@ echo "<pre>";
 print_r($result);
 echo "</pre>";
 echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
-?>

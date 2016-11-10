@@ -1,5 +1,9 @@
 # ChangeLog
 
+
+## Version 2.0.5 (10.11.2016)
+* Add PSR-4 autload
+
 ## Version 2.0.4 (27.09.2016)
 * Add function to get campaign statistics
 

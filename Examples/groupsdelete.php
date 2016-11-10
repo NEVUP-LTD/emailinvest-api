@@ -8,4 +8,4 @@ $ei->host="app1.emailinvest.com/api";
 $GroupId="GroupID";
 $result=$ei->groupsDelete($GroupId);
 echo $result["code"]=="1" ?  "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
-?>
+

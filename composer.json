@@ -9,10 +9,11 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "emailinvest/emailinvest-api": "2.0.4"
     },
    "autoload": {
-        "files": ["LatestApi/Emailinvest.php"]
+        "files": ["EmailinvestAutoload.php"]
     },
     "license": "LGPL-2.1"
 }

@@ -8,7 +8,7 @@
  * 
  */
 
-include 'LatestApi/Emailinvest.php';
+include 'LatestApi/Class.Emailinvest.php';
 
 use Api;
 
@@ -22,5 +22,4 @@ $result=$ei->validate($email);
 // LOG FROM VALIDATE
 var_dump($result["data"]["list"]);
 
-?>
 

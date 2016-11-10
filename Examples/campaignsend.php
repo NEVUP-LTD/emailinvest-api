@@ -3,7 +3,7 @@
 /**
  * Send Campaign
  */
-include ("../LatestApi/Emailinvest.php");
+include("../LatestApi/Class.Emailinvest.php");
 
 use api;
 

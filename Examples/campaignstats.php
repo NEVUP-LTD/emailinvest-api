@@ -3,7 +3,7 @@
 /*
  * Copyright (C) 2016 Emailinvest API.
  * 
- * Return all of your groups
+ * Return your account data
  */
 
 include '../LatestApi/Class.Emailinvest.php';
@@ -11,7 +11,7 @@ include '../LatestApi/Class.Emailinvest.php';
 use api;
 
 $ei = new api\emailinvest("your_api_key", "your_username", true);
-$ei->host = "app1.emailinvest.com/api";
+$ei->Host = "app1.emailinvest.com/api";
 
-$result = $ei->groupsGetList();
+$result = $ei->getStats($campId);
 var_dump($result);

@@ -3,7 +3,6 @@
 /**
  * Add new contact
  */
-include 'LatestApi/Emailinvest.php';
 
 use Api;
 
@@ -31,5 +30,5 @@ $result = $ei->contactsAdd("support@emailinvest.com", $groups, $fields, $setting
 // echo "<pre>"; print_r($result); echo "</pre>";
 echo $r["code"] == "1" ? "Success - {$r["text"]}" : "Error #{$r["code"]}, {$r["text"]}";
 echo $result["code"] == "1" ? "Success - {$result["text"]}" : "Error #{$result["code"]}, {$result["text"]}";
-?>
+
 

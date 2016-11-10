@@ -1,16 +1,14 @@
 <?php
-
 /*
  * Copyright (C) 2016 Emailinvest API.
  * 
  * Return your account data
  */
+require '../EmailinvestAutoload.php';
 
-include '../LatestApi/Emailinvest.php';
+use Emailinvest;
 
-use api;
-
-$ei = new api\emailinvest("your_api_key", "your_username", true);
+$ei = new Emailinvest("your_api_key", "your_username", true);
 $ei->Host = "app1.emailinvest.com/api";
 
 $result = $ei->me();
