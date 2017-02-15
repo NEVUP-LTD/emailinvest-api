@@ -30,7 +30,7 @@ INSTALLATION
 DEFINE CLASS
 ------------
 
-    $ei = new api\emailinvest("YOUR_KEY", "YOUR_USERNAME", true);
+    $ei = new Emailinvest("your_api_key", "your_username", true);
     $result = $ei->me();
     var_dump($result);
 
