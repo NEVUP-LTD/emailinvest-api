@@ -10,7 +10,7 @@
 
 require '../EmailinvestAutoload.php';
 
-$ei = new emailinvest("yourApiKey", "yourUsername", true);
+$ei = new Emailinvest("your_api_key", "your_username", true);
 
 $email = "support@mail.bg";
 

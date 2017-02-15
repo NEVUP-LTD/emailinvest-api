@@ -1,7 +1,7 @@
 <?php
 require '../EmailinvestAutoload.php';
 
-$ei = new emailinvest("yourApiKey", "yourUsername", true);
+$ei = new Emailinvest("your_api_key", "your_username", true);
 
 $GroupId = "GroupID";
 $result = $ei->groupsDelete($GroupId);

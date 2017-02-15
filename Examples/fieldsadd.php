@@ -5,7 +5,7 @@
  */
 require '../EmailinvestAutoload.php';
 
-$ei = new emailinvest("yourApiKey", "yourUsername", true);
+$ei = new Emailinvest("your_api_key", "your_username", true);
 
 $code = "{field_code}"; // Like - {first_name}, {last_name}
 $name = "field name"; // Like - First name, Last name, Phone
